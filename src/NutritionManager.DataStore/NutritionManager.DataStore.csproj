@@ -7,6 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NutritionManager.Application.Interface\NutritionManager.Application.Interface.csproj" />
+        <ProjectReference Include="..\NutritionManager.Application.Interface\NutritionManager.Application.Interface.csproj" />
     </ItemGroup>
 </Project>

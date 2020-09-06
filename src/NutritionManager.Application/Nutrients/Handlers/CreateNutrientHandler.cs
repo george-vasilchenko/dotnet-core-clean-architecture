@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using NutritionManager.Application.Interface.Nutrients.Repositories;
+using NutritionManager.Application.Nutrients.Commands;
 
-namespace NutritionManager.Application.Nutrients
+namespace NutritionManager.Application.Nutrients.Handlers
 {
     public class CreateNutrientHandler
     {

@@ -2,6 +2,7 @@
 using AutoFixture;
 using FluentAssertions;
 using NUnit.Framework;
+using NutritionManager.Application.Interface.Nutrients;
 using NutritionManager.Application.Nutrients;
 
 namespace NutritionManager.Application.Test

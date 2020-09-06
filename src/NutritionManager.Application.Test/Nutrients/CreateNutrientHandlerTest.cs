@@ -4,7 +4,10 @@ using AutoFixture;
 using FakeItEasy;
 using FluentAssertions;
 using NUnit.Framework;
-using NutritionManager.Application.Nutrients;
+using NutritionManager.Application.Interface.Nutrients;
+using NutritionManager.Application.Interface.Nutrients.Repositories;
+using NutritionManager.Application.Nutrients.Commands;
+using NutritionManager.Application.Nutrients.Handlers;
 
 namespace NutritionManager.Application.Test.Nutrients
 {

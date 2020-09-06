@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NutritionManager.Application\NutritionManager.Application.csproj" />
+    <ProjectReference Include="..\NutritionManager.DataStore\NutritionManager.DataStore.csproj" />
+  </ItemGroup>
+
+</Project>

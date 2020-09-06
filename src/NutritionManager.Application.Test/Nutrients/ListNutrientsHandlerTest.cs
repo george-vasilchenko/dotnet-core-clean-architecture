@@ -5,7 +5,11 @@ using AutoFixture;
 using FakeItEasy;
 using FluentAssertions;
 using NUnit.Framework;
+using NutritionManager.Application.Interface.Nutrients;
+using NutritionManager.Application.Interface.Nutrients.Repositories;
 using NutritionManager.Application.Nutrients;
+using NutritionManager.Application.Nutrients.Handlers;
+using NutritionManager.Application.Nutrients.Queries;
 
 namespace NutritionManager.Application.Test.Nutrients
 {
@@ -44,7 +48,7 @@ namespace NutritionManager.Application.Test.Nutrients
         private static IEnumerable<INutrient> GetFakeNutrients(int nutrientsCount)
         {
             return Enumerable
-                .Range(0, 3)
+                .Range(0, nutrientsCount)
                 .Select(i => Nutrient.Create(new Fixture().Create<string>()));
         }
 

@@ -1,4 +1,4 @@
-﻿namespace NutritionManager.Application.Nutrients
+﻿namespace NutritionManager.Application.Nutrients.Commands
 {
     public class CreateNutrientCommand : ICreateNutrientCommand
     {
