@@ -1,28 +1,38 @@
-﻿using System.Threading.Tasks;
-using NutritionManager.Application.Interface.Nutrients.Repositories;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
 using NutritionManager.Application.Nutrients.Commands;
+using NutritionManager.Application.Nutrients.Repositories;
 
 namespace NutritionManager.Application.Nutrients.Handlers
 {
     public class CreateNutrientHandler
     {
-        private INutrientRepository repository;
+        private readonly INutrientRepository repository;
 
         public CreateNutrientHandler(INutrientRepository repository)
         {
             this.repository = repository;
         }
 
-        public Task HandleCommandAsync(ICreateNutrientCommand command)
+        public async Task HandleCommandAsync(CreateNutrient command)
         {
             if (command is null)
             {
-                throw new System.ArgumentNullException(nameof(command));
+                throw new ArgumentNullException(nameof(command));
             }
 
-            var nutrient = Nutrient.Create(command.Title);
+            var searchResults = await this.repository.FindAsync(n => n.Title == command.Title);
+            var nutrient = searchResults.SingleOrDefault();
+            
+            if (nutrient != null)
+            {
+                throw new InvalidOperationException($"Nutrient with the title {nutrient.Title} already exists");
+            }
 
-            return this.repository.SaveAsync(nutrient);
+            nutrient = Nutrient.Create(command.Title);
+
+            await this.repository.AddAsync(nutrient);
         }
     }
 }

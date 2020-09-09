@@ -5,8 +5,4 @@
         <Nullable>enable</Nullable>
         <LangVersion>8</LangVersion>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\NutritionManager.Application.Interface\NutritionManager.Application.Interface.csproj" />
-    </ItemGroup>
 </Project>

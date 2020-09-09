@@ -1,0 +1,12 @@
+﻿GET http://localhost:5000/api/v1/nutrients/list-all-nutrients
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:5000/api/v1/nutrients/list-all-nutrients
+Accept: */*
+Cache-Control: no-cache
+
+###
+

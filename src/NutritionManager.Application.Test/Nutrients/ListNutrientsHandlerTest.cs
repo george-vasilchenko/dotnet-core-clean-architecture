@@ -5,25 +5,26 @@ using AutoFixture;
 using FakeItEasy;
 using FluentAssertions;
 using NUnit.Framework;
-using NutritionManager.Application.Interface.Nutrients;
-using NutritionManager.Application.Interface.Nutrients.Repositories;
 using NutritionManager.Application.Nutrients;
 using NutritionManager.Application.Nutrients.Handlers;
 using NutritionManager.Application.Nutrients.Queries;
+using NutritionManager.Application.Nutrients.Repositories;
 
 namespace NutritionManager.Application.Test.Nutrients
 {
     public class ListNutrientsHandlerTest
     {
-        private readonly ListNutrientsHandler sut;
-        private readonly INutrientRepository repository;
+        private INutrientRepository repository;
 
-        public ListNutrientsHandlerTest()
+        private ListNutrientsHandler sut;
+
+        [SetUp]
+        public void Setup()
         {
             this.repository = A.Fake<INutrientRepository>();
             this.sut = new ListNutrientsHandler(this.repository);
         }
-
+        
         [Test]
         public async Task HandleQueryAsync_WithValidArgs_ReturnsListOfNutrients()
         {
@@ -45,16 +46,16 @@ namespace NutritionManager.Application.Test.Nutrients
                 .MustHaveHappenedOnceExactly();
         }
 
-        private static IEnumerable<INutrient> GetFakeNutrients(int nutrientsCount)
+        private static IEnumerable<Nutrient> GetFakeNutrients(int nutrientsCount)
         {
             return Enumerable
                 .Range(0, nutrientsCount)
                 .Select(i => Nutrient.Create(new Fixture().Create<string>()));
         }
 
-        private static IListNutrientsQuery GetFakeListNutrientsQuery()
+        private static ListNutrients GetFakeListNutrientsQuery()
         {
-            return new ListNutrientsQuery(o => o != null);
+            return new ListNutrients(o => o != null);
         }
     }
 }

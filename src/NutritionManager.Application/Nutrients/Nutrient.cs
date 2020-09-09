@@ -1,9 +1,8 @@
 ﻿using System;
-using NutritionManager.Application.Interface.Nutrients;
 
 namespace NutritionManager.Application.Nutrients
 {
-    public class Nutrient : INutrient
+    public class Nutrient
     {
         private Nutrient(string title)
         {
@@ -12,7 +11,19 @@ namespace NutritionManager.Application.Nutrients
 
         public string Title { get; }
 
-        public static INutrient Create(string title)
+        public bool IsDeleted { get; private set; }
+
+        public void MarkDeleted()
+        {
+            if (this.IsDeleted)
+            {
+                throw new InvalidOperationException("Nutrient is already deleted");
+            }
+
+            this.IsDeleted = true;
+        }
+
+        public static Nutrient Create(string title)
         {
             if (string.IsNullOrWhiteSpace(title))
             {

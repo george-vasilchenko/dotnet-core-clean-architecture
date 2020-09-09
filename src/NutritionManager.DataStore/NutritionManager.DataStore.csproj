@@ -7,6 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\NutritionManager.Application.Interface\NutritionManager.Application.Interface.csproj" />
+        <ProjectReference Include="..\NutritionManager.Application\NutritionManager.Application.csproj" />
+        <ProjectReference Include="..\NutritionManager.Crosscutting\NutritionManager.Crosscutting.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.0.0" />
     </ItemGroup>
 </Project>

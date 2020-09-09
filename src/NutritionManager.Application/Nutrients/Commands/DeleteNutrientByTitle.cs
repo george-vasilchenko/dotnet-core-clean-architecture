@@ -1,8 +1,8 @@
 ﻿namespace NutritionManager.Application.Nutrients.Commands
 {
-    public class CreateNutrientCommand : ICreateNutrientCommand
+    public class DeleteNutrientByTitle
     {
-        public CreateNutrientCommand(string title)
+        public DeleteNutrientByTitle(string title)
         {
             this.Title = title;
         }

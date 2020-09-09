@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NutritionManager.Application\NutritionManager.Application.csproj" />
+      <ProjectReference Include="..\NutritionManager.Crosscutting\NutritionManager.Crosscutting.csproj" />
+      <ProjectReference Include="..\NutritionManager.DataStore\NutritionManager.DataStore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    </ItemGroup>
+
+
+</Project>
