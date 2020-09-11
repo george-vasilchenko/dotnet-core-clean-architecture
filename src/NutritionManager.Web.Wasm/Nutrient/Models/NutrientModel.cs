@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NutritionManager.Web.Wasm.Nutrient
+namespace NutritionManager.Web.Wasm.Nutrient.Models
 {
     public class NutrientModel
     {

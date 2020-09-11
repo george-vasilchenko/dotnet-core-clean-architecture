@@ -18,16 +18,20 @@ namespace NutritionManager.Web.Api.Nutrients
 
         private readonly DeleteNutrientByIdHandler deleteNutrientByIdHandler;
 
+        private readonly GetNutrientDetailsHandler getNutrientDetailsHandler;
+
         private readonly ListNutrientsHandler listNutrientsHandler;
 
         public NutrientController(
             ListNutrientsHandler listNutrientsHandler,
             CreateNutrientHandler createNutrientHandler,
-            DeleteNutrientByIdHandler deleteNutrientByIdHandler)
+            DeleteNutrientByIdHandler deleteNutrientByIdHandler,
+            GetNutrientDetailsHandler getNutrientDetailsHandler)
         {
             this.listNutrientsHandler = listNutrientsHandler;
             this.createNutrientHandler = createNutrientHandler;
             this.deleteNutrientByIdHandler = deleteNutrientByIdHandler;
+            this.getNutrientDetailsHandler = getNutrientDetailsHandler;
         }
 
         [HttpGet("list-all")]
@@ -38,6 +42,16 @@ namespace NutritionManager.Web.Api.Nutrients
 
             return handlerTask
                 .ContinueWith(antecedent => new NutrientsListViewModel(antecedent.Result));
+        }
+        
+        [HttpGet]
+        public Task<NutrientDetailsViewModel> Get([FromQuery] [Required] Guid nutrientId)
+        {
+            var query = new GetNutrientDetails(nutrientId);
+            var handlerTask = this.getNutrientDetailsHandler.HandleQueryAsync(query);
+
+            return handlerTask
+                .ContinueWith(antecedent => new NutrientDetailsViewModel(antecedent.Result));
         }
 
         [HttpPost("add")]

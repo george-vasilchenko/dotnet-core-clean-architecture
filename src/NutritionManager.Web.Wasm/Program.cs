@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using NutritionManager.Web.Wasm.Nutrient;
+using NutritionManager.Web.Wasm.Nutrient.Services;
 
 namespace NutritionManager.Web.Wasm
 {

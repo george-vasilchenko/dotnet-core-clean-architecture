@@ -2,8 +2,10 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using NutritionManager.Web.Wasm.Nutrient.Models;
+using NutritionManager.Web.Wasm.Static;
 
-namespace NutritionManager.Web.Wasm.Nutrient
+namespace NutritionManager.Web.Wasm.Nutrient.Services
 {
     public class NutrientService
     {
@@ -17,7 +19,7 @@ namespace NutritionManager.Web.Wasm.Nutrient
         public async Task<NutrientModelsList> GetAllNutrients()
         {
             var responseString = await this.httpClient
-                .GetStringAsync(@"https://localhost:5011/api/v1/nutrient/list-all");
+                .GetStringAsync(UrisProvider.NutrientsList);
 
             if (string.IsNullOrWhiteSpace(responseString))
             {
@@ -25,6 +27,19 @@ namespace NutritionManager.Web.Wasm.Nutrient
             }
 
             return JsonConvert.DeserializeObject<NutrientModelsList>(responseString);
+        }
+
+        public async Task<NutrientModel> GetNutrient(Guid id)
+        {
+            var responseString = await this.httpClient
+                .GetStringAsync(UrisProvider.NutrientDetails(id));
+
+            if (string.IsNullOrWhiteSpace(responseString))
+            {
+                throw new InvalidOperationException("Something went wrong.");
+            }
+
+            return JsonConvert.DeserializeObject<NutrientModel>(responseString);
         }
     }
 }

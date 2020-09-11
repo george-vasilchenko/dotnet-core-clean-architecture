@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NutritionManager.Web.Wasm.Nutrient
+namespace NutritionManager.Web.Wasm.Nutrient.Models
 {
     public class NutrientModelsList
     {

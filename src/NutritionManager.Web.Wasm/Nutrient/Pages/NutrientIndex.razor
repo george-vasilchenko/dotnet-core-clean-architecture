@@ -1,7 +1,7 @@
 ﻿@page "/nutrient"
 <h1>Nutrient</h1>
 
-<div class="table-responsive">
+<div class="table-responsive table-hover">
     <table class="table">
         <thead>
         <tr>
@@ -20,7 +20,8 @@
 
             @foreach (var nutrient in NutrientsList.Items)
             {
-                <tr onclick="alert('@nutrient.NutrientId.ToString()')">
+                <tr @onclick=@(e => OpenNutrientById(nutrient.NutrientId)) 
+                    class="clickable-row">
                     <th scope="row">@i.ToString()</th>
                     <td>@nutrient.Title</td>
                 </tr>
@@ -31,3 +32,9 @@
         </tbody>
     </table>
 </div>
+<style>
+    .clickable-row
+    {
+        cursor: pointer;
+    }
+</style>

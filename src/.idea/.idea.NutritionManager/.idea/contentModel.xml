@@ -39,10 +39,12 @@
           <e p="Handlers" t="Include">
             <e p="CreateNutrientHandler.cs" t="Include" />
             <e p="DeleteNutrientByIdHandler.cs" t="Include" />
+            <e p="GetNutrientDetailsHandler.cs" t="Include" />
             <e p="ListNutrientsHandler.cs" t="Include" />
           </e>
           <e p="Nutrient.cs" t="Include" />
           <e p="Queries" t="Include">
+            <e p="GetNutrientDetails.cs" t="Include" />
             <e p="ListNutrients.cs" t="Include" />
           </e>
           <e p="Repositories" t="Include" />
@@ -62,6 +64,7 @@
         <e p="Nutrients" t="Include">
           <e p="CreateNutrientHandlerTest.cs" t="Include" />
           <e p="DeleteNutrientByIdHandlerTest.cs" t="Include" />
+          <e p="GetNutrientDetailsHandlerTest.cs" t="Include" />
           <e p="ListNutrientsHandlerTest.cs" t="Include" />
           <e p="NutrientTest.cs" t="Include" />
         </e>
@@ -158,6 +161,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Nutrients" t="Include">
           <e p="NutrientController.cs" t="Include" />
+          <e p="NutrientDetailsViewModel.cs" t="Include" />
           <e p="NutrientListItemViewModel.cs" t="Include" />
           <e p="NutrientsListViewModel.cs" t="Include" />
         </e>
@@ -180,11 +184,19 @@
         <e p="App.razor" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Nutrient" t="Include">
-          <e p="Nutrient.razor" t="Include" />
-          <e p="Nutrient.razor.cs" t="Include" />
-          <e p="NutrientModel.cs" t="Include" />
-          <e p="NutrientModelsList.cs" t="Include" />
-          <e p="NutrientService.cs" t="Include" />
+          <e p="Models" t="Include">
+            <e p="NutrientModel.cs" t="Include" />
+            <e p="NutrientModelsList.cs" t="Include" />
+          </e>
+          <e p="Pages" t="Include">
+            <e p="NutrientDetails.razor" t="Include" />
+            <e p="NutrientDetails.razor.cs" t="Include" />
+            <e p="NutrientIndex.razor" t="Include" />
+            <e p="NutrientIndex.razor.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="NutrientService.cs" t="Include" />
+          </e>
         </e>
         <e p="NutritionManager.Web.Wasm.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -207,6 +219,10 @@
           <e p="MainLayout.razor" t="Include" />
           <e p="NavMenu.razor" t="Include" />
           <e p="SurveyPrompt.razor" t="Include" />
+        </e>
+        <e p="Static" t="Include">
+          <e p="Routes.cs" t="Include" />
+          <e p="UrisProvider.cs" t="Include" />
         </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">

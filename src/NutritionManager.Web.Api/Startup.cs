@@ -61,6 +61,7 @@ namespace NutritionManager.Web.Api
             services.AddScoped<CreateNutrientHandler>();
             services.AddScoped<ListNutrientsHandler>();
             services.AddScoped<DeleteNutrientByIdHandler>();
+            services.AddScoped<GetNutrientDetailsHandler>();
             services.AddSingleton<IRepository<Nutrient, Guid>, NutrientRepository>();
         }
     }

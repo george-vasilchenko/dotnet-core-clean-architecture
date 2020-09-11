@@ -5,26 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
+            "name": "Attach to Edge",
+            "port": 5001,
             "request": "attach",
-            "processId": "${command:pickProcess}"
-        },
-        {
-            "name": "Launch Edge",
-            "request": "launch",
             "type": "pwa-msedge",
-            "url": "https://localhost:5001",
             "webRoot": "${workspaceFolder}"
-        },
-        {
-            "name": "Debug Blazor WASM",
-            "type": "blazorwasm",
-            "request": "launch",
-            "hosted": true,
-            "program": "${workspaceFolder}/NutritionManager.Web.Wasm/bin/Debug/netstandard2.1/NutritionManager.Web.Wasm.dll",
-            "cwd": "${workspaceFolder}/NutritionManager.Web.Wasm",
-            "browser": "edge"
         }
     ]
 }
