@@ -16,7 +16,7 @@ namespace NutritionManager.Application.Nutrients
 
         public string Title { get; } = string.Empty;
 
-        public Guid NutrientId { get;  }
+        public Guid NutrientId { get; }
 
         public static Nutrient Create(string title)
         {

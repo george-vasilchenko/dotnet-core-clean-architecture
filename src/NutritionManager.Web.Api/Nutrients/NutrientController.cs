@@ -8,7 +8,7 @@ using NutritionManager.Application.Nutrients.Handlers;
 using NutritionManager.Application.Nutrients.Queries;
 using NutritionManager.Crosscutting.Templates;
 
-namespace NutritionManager.WebApi.Nutrients
+namespace NutritionManager.Web.Api.Nutrients
 {
     [ApiController]
     [Route("/api/v1/nutrient")]

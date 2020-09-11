@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NutritionManager.Application.Nutrients;
 
-namespace NutritionManager.WebApi.Nutrients
+namespace NutritionManager.Web.Api.Nutrients
 {
     public class NutrientsListViewModel
     {

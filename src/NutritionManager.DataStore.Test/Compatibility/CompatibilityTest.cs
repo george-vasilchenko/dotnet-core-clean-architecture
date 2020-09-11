@@ -25,7 +25,7 @@ namespace NutritionManager.DataStore.Test.Compatibility
             // Assert
             difference.Should().BeEmpty();
         }
-        
+
         [Test]
         public void InMemory_Nutrient_IsCompatibleWith_NutrientModel()
         {
@@ -51,7 +51,7 @@ namespace NutritionManager.DataStore.Test.Compatibility
                 typeof(Nutrient).GetProperties(GetPropertyBindingFlags())
                     .Select(p => p.Name);
             var nutrientModelPropertyNames =
-                typeof(NutritionManager.DataStore.Mongo.Nutrients.NutrientModel).GetProperties(GetPropertyBindingFlags())
+                typeof(Mongo.Nutrients.NutrientModel).GetProperties(GetPropertyBindingFlags())
                     .Select(p => p.Name);
 
             var difference = nutrientPropertyNames.Except(nutrientModelPropertyNames).ToArray();
@@ -59,13 +59,13 @@ namespace NutritionManager.DataStore.Test.Compatibility
             // Assert
             difference.Should().BeEmpty();
         }
-        
+
         [Test]
         public void MongoDb_Nutrient_IsCompatibleWith_NutrientModel()
         {
             // Arrange
             var nutrientModelPropertyNames =
-                typeof(NutritionManager.DataStore.Mongo.Nutrients.NutrientModel).GetProperties(GetPropertyBindingFlags())
+                typeof(Mongo.Nutrients.NutrientModel).GetProperties(GetPropertyBindingFlags())
                     .Select(p => p.Name);
             var nutrientPropertyNames =
                 typeof(Nutrient).GetProperties(GetPropertyBindingFlags())
@@ -83,6 +83,5 @@ namespace NutritionManager.DataStore.Test.Compatibility
                    | BindingFlags.Public
                    | BindingFlags.DeclaredOnly;
         }
-        
     }
 }

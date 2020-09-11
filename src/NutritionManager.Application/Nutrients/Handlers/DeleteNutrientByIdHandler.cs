@@ -20,7 +20,7 @@ namespace NutritionManager.Application.Nutrients.Handlers
             {
                 throw new ArgumentNullException(nameof(command));
             }
-            
+
             await this.repository.RemoveOneByKeyAsync(command.Id);
         }
     }

@@ -7,6 +7,5 @@ namespace NutritionManager.DataStore.InMemory.Nutrients
         public Guid NutrientId { get; set; }
 
         public string Title { get; set; } = string.Empty;
-
     }
 }

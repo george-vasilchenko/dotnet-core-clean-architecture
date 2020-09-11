@@ -1,0 +1,33 @@
+﻿@page "/nutrient"
+<h1>Nutrient</h1>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (NutrientsList?.Items == null)
+        {
+            <em>Loading...</em>
+        }
+        else
+        {
+            var i = 1;
+
+            @foreach (var nutrient in NutrientsList.Items)
+            {
+                <tr onclick="alert('@nutrient.NutrientId.ToString()')">
+                    <th scope="row">@i.ToString()</th>
+                    <td>@nutrient.Title</td>
+                </tr>
+
+                i++;
+            }
+        }
+        </tbody>
+    </table>
+</div>

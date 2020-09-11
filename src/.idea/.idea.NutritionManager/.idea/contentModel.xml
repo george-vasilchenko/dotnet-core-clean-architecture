@@ -12,13 +12,15 @@
     <e p="C:\Users\georg\.nuget\packages\nunit3testadapter\3.15.1\build\netcoreapp2.0\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\georg\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\georg\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_NutritionManager.-1313186955.00" t="ExcludeRecursive" />
+    <e p="C:\Users\georg\AppData\Roaming\JetBrains\Rider2020.2\javascript\extLibs\http_stackpath.bootstrapcdn.com_bootstrap_4.5.2_css_bootstrap.css" t="IncludeRecursive" />
     <e p="C:\Users\georg\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
     <e p="E:\Code\GitHub\george-vasilchenko\dotnet-core-clean-architecture\src" t="IncludeFlat">
-      <e p="0.Misc" t="Include" />
+      <e p="0.Clients" t="Include" />
       <e p="1.Presentation" t="Include" />
       <e p="2.Application" t="Include" />
       <e p="3.Infrastructure" t="Include" />
       <e p="4.Shared" t="Include" />
+      <e p="9.Misc" t="Include" />
       <e p="NutritionManager.Application" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common" t="Include">
@@ -150,7 +152,7 @@
         </e>
       </e>
       <e p="NutritionManager.sln" t="IncludeFlat" />
-      <e p="NutritionManager.WebApi" t="IncludeRecursive">
+      <e p="NutritionManager.Web.Api" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -159,11 +161,11 @@
           <e p="NutrientListItemViewModel.cs" t="Include" />
           <e p="NutrientsListViewModel.cs" t="Include" />
         </e>
-        <e p="NutritionManager.WebApi.csproj" t="IncludeRecursive" />
+        <e p="NutritionManager.Web.Api.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="NutritionManager.WebApi.AssemblyInfo.cs" t="Include" />
+              <e p="NutritionManager.Web.Api.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -172,6 +174,71 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="NutritionManager.Web.Wasm" t="IncludeRecursive">
+        <e p="_Imports.razor" t="Include" />
+        <e p="App.razor" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Nutrient" t="Include">
+          <e p="Nutrient.razor" t="Include" />
+          <e p="Nutrient.razor.cs" t="Include" />
+          <e p="NutrientModel.cs" t="Include" />
+          <e p="NutrientModelsList.cs" t="Include" />
+          <e p="NutrientService.cs" t="Include" />
+        </e>
+        <e p="NutritionManager.Web.Wasm.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="NutritionManager.Web.Wasm.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pages" t="Include">
+          <e p="Counter.razor" t="Include" />
+          <e p="FetchData.razor" t="Include" />
+          <e p="Index.razor" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="MainLayout.razor" t="Include" />
+          <e p="NavMenu.razor" t="Include" />
+          <e p="SurveyPrompt.razor" t="Include" />
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="app.css" t="Include" />
+            <e p="bootstrap" t="Include">
+              <e p="bootstrap.min.css" t="Include" />
+              <e p="bootstrap.min.css.map" t="Include" />
+            </e>
+            <e p="open-iconic" t="Include">
+              <e p="font" t="Include">
+                <e p="css" t="Include">
+                  <e p="open-iconic-bootstrap.min.css" t="Include" />
+                </e>
+                <e p="fonts" t="Include">
+                  <e p="open-iconic.eot" t="Include" />
+                  <e p="open-iconic.otf" t="Include" />
+                  <e p="open-iconic.svg" t="Include" />
+                  <e p="open-iconic.ttf" t="Include" />
+                  <e p="open-iconic.woff" t="Include" />
+                </e>
+              </e>
+              <e p="FONT-LICENSE" t="Include" />
+              <e p="ICON-LICENSE" t="Include" />
+              <e p="README.md" t="Include" />
+            </e>
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="sample-data" t="Include">
+            <e p="weather.json" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
