@@ -1,11 +1,13 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NutritionManager.Application.Common;
+using NutritionManager.Application.Nutrients;
 using NutritionManager.Application.Nutrients.Handlers;
-using NutritionManager.Application.Nutrients.Repositories;
-using NutritionManager.DataStore.Nutrients.Repositories;
+using NutritionManager.DataStore.InMemory.Nutrients;
 
 namespace NutritionManager.WebApi
 {
@@ -21,8 +23,7 @@ namespace NutritionManager.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             RegisterApplicationServices(services);
-            services.AddControllers()
-                .AddNewtonsoftJson();
+            services.AddControllers();
         }
 
         private static void RegisterApplicationServices(IServiceCollection services)
@@ -30,8 +31,8 @@ namespace NutritionManager.WebApi
             // Nutrients
             services.AddScoped<CreateNutrientHandler>();
             services.AddScoped<ListNutrientsHandler>();
-            services.AddScoped<DeleteNutrientByTitleHandler>();
-            services.AddSingleton<INutrientRepository, InMemoryNutrientRepository>();
+            services.AddScoped<DeleteNutrientByIdHandler>();
+            services.AddSingleton<IRepository<Nutrient, Guid>, NutrientRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

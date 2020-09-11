@@ -1,21 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using NutritionManager.Application.Common;
 using NutritionManager.Application.Nutrients.Queries;
-using NutritionManager.Application.Nutrients.Repositories;
 
 namespace NutritionManager.Application.Nutrients.Handlers
 {
     public class ListNutrientsHandler
     {
-        private readonly INutrientRepository repository;
+        private readonly IRepository<Nutrient, Guid> repository;
 
-        public ListNutrientsHandler(INutrientRepository repository)
+        public ListNutrientsHandler(IRepository<Nutrient, Guid> repository)
         {
             this.repository = repository;
         }
 
         public Task<IEnumerable<Nutrient>> HandleQueryAsync(ListNutrients query)
         {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+
             return this.repository.FindAsync(query.Filter);
         }
     }

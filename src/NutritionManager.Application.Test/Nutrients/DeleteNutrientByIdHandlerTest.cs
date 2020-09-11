@@ -1,47 +1,46 @@
 ﻿using System;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AutoFixture;
 using FakeItEasy;
 using NUnit.Framework;
+using NutritionManager.Application.Common;
 using NutritionManager.Application.Nutrients;
 using NutritionManager.Application.Nutrients.Commands;
 using NutritionManager.Application.Nutrients.Handlers;
-using NutritionManager.Application.Nutrients.Repositories;
 
 namespace NutritionManager.Application.Test.Nutrients
 {
-    public class DeleteNutrientByTitleHandlerTest
+    public class DeleteNutrientByIdHandlerTest
     {
-        private INutrientRepository repository;
+        private IRepository<Nutrient, Guid> repository;
 
-        private DeleteNutrientByTitleHandler sut;
+        private DeleteNutrientByIdHandler sut;
 
         [SetUp]
         public void Setup()
         {
-            this.repository = A.Fake<INutrientRepository>();
-            this.sut = new DeleteNutrientByTitleHandler(this.repository);
+            this.repository = A.Fake<IRepository<Nutrient, Guid>>();
+            this.sut = new DeleteNutrientByIdHandler(this.repository);
         }
 
         [Test]
         public async Task HandleCommandAsync_WithValidParams_DeletesNutrient()
         {
             // Arrange
-            var title = new Fixture().Create<string>();
+            var nutrientId = new Fixture().Create<Guid>();
             var fakeNutrient = CreteFakeNutrient();
-            var command = new DeleteNutrientByTitle(title);
+            var command = new DeleteNutrientById(nutrientId);
 
-            A.CallTo(() => this.repository.GetAsync(A<Expression<Func<Nutrient, bool>>>.Ignored))
-                .Returns(Task.FromResult(fakeNutrient));
+            A.CallTo(() => this.repository.GetOneByKeyAsync(nutrientId))
+                .Returns(fakeNutrient);
 
             // Act
             await this.sut.HandleCommandAsync(command);
 
             // Assert
-            A.CallTo(() => this.repository.GetAsync(A<Expression<Func<Nutrient, bool>>>.Ignored))
+            A.CallTo(() => this.repository.GetOneByKeyAsync(nutrientId))
                 .MustHaveHappenedOnceExactly();
-            A.CallTo(() => this.repository.UpdateAsync(fakeNutrient))
+            A.CallTo(() => this.repository.SaveOneAsync(fakeNutrient))
                 .MustHaveHappenedOnceExactly();
         }
 

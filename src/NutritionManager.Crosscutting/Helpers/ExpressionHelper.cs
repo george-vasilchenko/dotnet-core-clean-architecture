@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace NutritionManager.Crosscutting
+namespace NutritionManager.Crosscutting.Helpers
 {
     public static class ExpressionHelper
     {

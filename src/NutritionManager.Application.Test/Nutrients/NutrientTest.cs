@@ -20,14 +20,15 @@ namespace NutritionManager.Application.Test.Nutrients
             //Assert
             instance.Should().NotBeNull();
             instance.Title.Should().Be(title);
+            instance.Id.Should().NotBe(Guid.Empty);
         }
 
         [Test]
         public void Create_WithNullTitle_Throws()
         {
             //Arrange
-            const string? title = default;
-            Action run = () => Nutrient.Create(title!);
+            const string title = default;
+            Action run = () => Nutrient.Create(title);
 
             //Act
 

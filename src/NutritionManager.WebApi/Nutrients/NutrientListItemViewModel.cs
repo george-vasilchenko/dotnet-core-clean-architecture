@@ -12,9 +12,12 @@ namespace NutritionManager.WebApi.Nutrients
                 throw new ArgumentNullException(nameof(nutrient));
             }
 
+            this.Id = nutrient.Id;
             this.Title = nutrient.Title;
             this.IsDeleted = nutrient.IsDeleted;
         }
+
+        public Guid Id { get; }
 
         public string Title { get; }
 

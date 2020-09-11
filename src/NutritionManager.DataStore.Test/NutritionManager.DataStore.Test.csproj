@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NutritionManager.DataStore\NutritionManager.DataStore.csproj" />
+      <ProjectReference Include="..\NutritionManager.DataStore.InMemory\NutritionManager.DataStore.InMemory.csproj" />
     </ItemGroup>
 
 </Project>

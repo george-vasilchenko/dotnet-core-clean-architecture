@@ -4,14 +4,15 @@ namespace NutritionManager.Application.Nutrients
 {
     public class Nutrient
     {
-        private Nutrient(string title)
+        private Nutrient()
         {
-            this.Title = title;
         }
 
-        public string Title { get; }
+        public string Title { get; private set; } = string.Empty;
 
         public bool IsDeleted { get; private set; }
+
+        public Guid Id { get; private set; }
 
         public void MarkDeleted()
         {
@@ -30,7 +31,11 @@ namespace NutritionManager.Application.Nutrients
                 throw new ArgumentException($"'{nameof(title)}' cannot be null or whitespace", nameof(title));
             }
 
-            return new Nutrient(title);
+            return new Nutrient
+            {
+                Title = title,
+                Id = Guid.NewGuid()
+            };
         }
     }
 }

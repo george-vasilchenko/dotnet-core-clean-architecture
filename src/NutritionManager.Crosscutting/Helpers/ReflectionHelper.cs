@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace NutritionManager.Crosscutting
+namespace NutritionManager.Crosscutting.Helpers
 {
     public static class ReflectionHelper
     {

@@ -2,7 +2,7 @@
 using NutritionManager.Application.Nutrients.Commands;
 using NutritionManager.Application.Nutrients.Handlers;
 using NutritionManager.Application.Nutrients.Queries;
-using NutritionManager.DataStore.Nutrients.Repositories;
+using NutritionManager.DataStore.InMemory.Nutrients;
 
 namespace NutritionManager.Console
 {
@@ -10,7 +10,7 @@ namespace NutritionManager.Console
     {
         public static async Task Main(string[] args)
         {
-            var repository = new InMemoryNutrientRepository();
+            var repository = new NutrientRepository();
             var commandHandler = new CreateNutrientHandler(repository);
             var command = new CreateNutrient("Vitamin D");
             await commandHandler.HandleCommandAsync(command);

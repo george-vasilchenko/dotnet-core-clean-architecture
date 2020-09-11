@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
+using NutritionManager.Application.Common;
 using NutritionManager.Application.Nutrients.Commands;
-using NutritionManager.Application.Nutrients.Repositories;
 
 namespace NutritionManager.Application.Nutrients.Handlers
 {
     public class CreateNutrientHandler
     {
-        private readonly INutrientRepository repository;
+        private readonly IRepository<Nutrient, Guid> repository;
 
-        public CreateNutrientHandler(INutrientRepository repository)
+        public CreateNutrientHandler(IRepository<Nutrient, Guid> repository)
         {
             this.repository = repository;
         }
@@ -22,9 +21,8 @@ namespace NutritionManager.Application.Nutrients.Handlers
                 throw new ArgumentNullException(nameof(command));
             }
 
-            var searchResults = await this.repository.FindAsync(n => n.Title == command.Title);
-            var nutrient = searchResults.SingleOrDefault();
-            
+            var nutrient = await this.repository.FindOneAsync(n => n.Title.Equals(command.Title));
+
             if (nutrient != null)
             {
                 throw new InvalidOperationException($"Nutrient with the title {nutrient.Title} already exists");
@@ -32,7 +30,7 @@ namespace NutritionManager.Application.Nutrients.Handlers
 
             nutrient = Nutrient.Create(command.Title);
 
-            await this.repository.AddAsync(nutrient);
+            await this.repository.InsertOneAsync(nutrient);
         }
     }
 }

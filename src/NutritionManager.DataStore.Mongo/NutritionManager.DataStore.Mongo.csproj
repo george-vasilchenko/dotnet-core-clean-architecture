@@ -9,9 +9,13 @@
     <ItemGroup>
         <ProjectReference Include="..\NutritionManager.Application\NutritionManager.Application.csproj" />
         <ProjectReference Include="..\NutritionManager.Crosscutting\NutritionManager.Crosscutting.csproj" />
+        <ProjectReference Include="..\NutritionManager.DataStore.Common\NutritionManager.DataStore.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="10.0.0" />
+        <PackageReference Include="AutoMapper" Version="10.0.0" />
+        <PackageReference Include="MongoDB.Bson" Version="2.11.1" />
+        <PackageReference Include="MongoDB.Driver" Version="2.11.1" />
     </ItemGroup>
+
 </Project>
