@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using NutritionManager.Application.Common;
 using NutritionManager.Application.Nutrients;
 using NutritionManager.Application.Nutrients.Handlers;
-using NutritionManager.DataStore.InMemory.Nutrients;
+using NutritionManager.DataStore.Mongo.Nutrients;
 
 namespace NutritionManager.WebApi
 {

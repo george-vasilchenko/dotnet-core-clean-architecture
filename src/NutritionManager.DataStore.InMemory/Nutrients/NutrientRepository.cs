@@ -39,7 +39,7 @@ namespace NutritionManager.DataStore.InMemory.Nutrients
         public async Task<Nutrient> GetOneByKeyAsync(Guid key)
         {
             var model = this.models
-                .Single(n => n.Id.Equals(key));
+                .Single(n => n.NutrientId.Equals(key));
 
             return await this.ConvertToEntityAsync(model);
         }
@@ -66,12 +66,12 @@ namespace NutritionManager.DataStore.InMemory.Nutrients
             var model = this.ConvertToModel(entity);
             this.models.Add(model);
 
-            return Task.FromResult(model.Id);
+            return Task.FromResult(model.NutrientId);
         }
 
         public Task RemoveOneByKeyAsync(Guid key)
         {
-            var model = this.models.Single(n => n.Id.Equals(key));
+            var model = this.models.Single(n => n.NutrientId.Equals(key));
             var indexInCollection = this.models.IndexOf(model);
 
             this.models.RemoveAt(indexInCollection);
@@ -86,7 +86,7 @@ namespace NutritionManager.DataStore.InMemory.Nutrients
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            var model = this.models.Single(n => n.Id == entity.Id);
+            var model = this.models.Single(n => n.NutrientId == entity.NutrientId);
             var index = this.models.IndexOf(model);
             this.models[index] = this.ConvertToModel(entity);
 
@@ -110,17 +110,17 @@ namespace NutritionManager.DataStore.InMemory.Nutrients
             {
                 new NutrientModel
                 {
-                    Id = Guid.Parse("fdb6cf76-7383-45ec-9344-ddde0c17f1c8"),
+                    NutrientId = Guid.Parse("fdb6cf76-7383-45ec-9344-ddde0c17f1c8"),
                     Title = "Carbohydrate"
                 },
                 new NutrientModel
                 {
-                    Id = Guid.Parse("6a41ba84-48bc-4eaf-a2b6-a7d262cf79c4"),
+                    NutrientId = Guid.Parse("6a41ba84-48bc-4eaf-a2b6-a7d262cf79c4"),
                     Title = "Protein"
                 },
                 new NutrientModel
                 {
-                    Id = Guid.Parse("a481664d-0044-481c-97cb-fe9fc37973f6"),
+                    NutrientId = Guid.Parse("a481664d-0044-481c-97cb-fe9fc37973f6"),
                     Title = "Fat"
                 }
             };

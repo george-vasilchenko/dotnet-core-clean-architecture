@@ -20,7 +20,7 @@ namespace NutritionManager.Application.Test.Nutrients
             //Assert
             instance.Should().NotBeNull();
             instance.Title.Should().Be(title);
-            instance.Id.Should().NotBe(Guid.Empty);
+            instance.NutrientId.Should().NotBe(Guid.Empty);
         }
 
         [Test]
@@ -64,35 +64,6 @@ namespace NutritionManager.Application.Test.Nutrients
             run.Should().ThrowExactly<ArgumentException>()
                 .Where(e => e.Message.Contains(nameof(title)))
                 .Where(e => e.Message.Contains("whitespace"));
-        }
-
-        [Test]
-        public void MarkDeleted_MarksAsDeleted()
-        {
-            // Arrange
-            var instance = Nutrient.Create(new Fixture().Create<string>());
-
-            //Act
-            instance.MarkDeleted();
-
-            //Assert
-            instance.Should().NotBeNull();
-            instance.IsDeleted.Should().BeTrue();
-        }
-
-        [Test]
-        public void MarkDeleted_IsAlreadyDeleted_Throws()
-        {
-            // Arrange
-            var instance = Nutrient.Create(new Fixture().Create<string>());
-            instance.MarkDeleted();
-
-            //Act
-            Action run = () => instance.MarkDeleted();
-
-            //Assert
-            run.Should().ThrowExactly<InvalidOperationException>()
-                .WithMessage("Nutrient is already deleted");
         }
     }
 }

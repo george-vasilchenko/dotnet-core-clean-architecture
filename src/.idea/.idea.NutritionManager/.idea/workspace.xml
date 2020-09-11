@@ -33,48 +33,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="249c985c-6556-4cbe-868c-b2a4f313419d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application/Common/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application/Exceptions/ApplicationException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Commands/DeleteNutrientById.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Common/NutritionManager.DataStore.Common.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Common/RepositoryBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Common/DbObjectBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/NutritionManager.DataStore.Mongo.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Test/Compatibility/CompatibilityTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/CreateNutrientHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/CreateNutrientHandlerTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/DeleteNutrientByTitleHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/DeleteNutrientByIdHandlerTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/ListNutrientsHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/ListNutrientsHandlerTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/DeleteNutrientByIdHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/DeleteNutrientByIdHandlerTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/NutritionManager.Application.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/NutritionManager.Application.Test.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Commands/DeleteNutrientByTitle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/CreateNutrientHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/CreateNutrientHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/DeleteNutrientByTitleHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/DeleteNutrientByIdHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/ListNutrientsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/ListNutrientsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/DeleteNutrientByIdHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/DeleteNutrientByIdHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Repositories/INutrientRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/NutritionManager.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/NutritionManager.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Console/NutritionManager.Console.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Console/NutritionManager.Console.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Console/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Console/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Crosscutting/Helpers/ExpressionHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Crosscutting/Helpers/ExpressionHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Crosscutting/Helpers/ReflectionHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Crosscutting/Helpers/ReflectionHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Crosscutting/Templates/ExpressionTemplates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Crosscutting/Templates/ExpressionTemplates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Test/Mappings/MappingAdapterTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Test/Compatibility/CompatibilityTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Test/Compatibility/CompatibilityTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Test/NutritionManager.DataStore.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Test/NutritionManager.DataStore.Test.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore/Mappings/MappingAdapter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Models/NutrientModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Repositories/InMemoryNutrientRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore/NutritionManager.DataStore.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/NutritionManager.DataStore.InMemory.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientListItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientListItemViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.WebApi/NutritionManager.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.WebApi/NutritionManager.WebApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.WebApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,19 +73,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Test/NutritionManager.DataStore.Test.csproj" />
-        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Test/Mappings/MappingAdapterTest.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/ImplementationDetails.txt" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Exceptions/ApplicationException.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Models/NutrientModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Models/InMemory/NutrientModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Models/MongoDb/NutrientModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientsListViewModel.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientListItemViewModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore/Mappings/MappingAdapter.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Common/DataContext.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Common/DataContextTest.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore/Nutrients/Repositories/InMemoryNutrientRepository.cs" />
@@ -137,7 +103,6 @@
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Queries/ListNutrients.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Repositories/INutrientRepository.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Common/IRepository.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.WebApi/Startup.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/CreateNutrientHandler.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/ListNutrientsHandler.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/CreateNutrientHandlerTest.cs" />
@@ -149,10 +114,16 @@
         <option value="$PROJECT_DIR$/NutritionManager.DataStore.Common/Class1.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore.Common/RepositoryBase.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientRepository.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientModel.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.WebApi/Startup.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/DeleteNutrientByIdHandlerTest.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/DeleteNutrientByIdHandler.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.WebApi/Nutrients/NutrientListItemViewModel.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientModel.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.DataStore.InMemory/Nutrients/NutrientModel.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.DataStore.Test/Compatibility/CompatibilityTest.cs" />
       </list>
     </option>
   </component>
@@ -172,7 +143,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Inspections-C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -265,7 +236,7 @@
       <workItem from="1599636591988" duration="6415000" />
       <workItem from="1599661475664" duration="4172000" />
       <workItem from="1599721637856" duration="26615000" />
-      <workItem from="1599774049181" duration="3923000" />
+      <workItem from="1599774049181" duration="9791000" />
     </task>
     <servers />
   </component>
@@ -307,6 +278,14 @@
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="1038" y="550" width="536" height="201" key="#Custom_Plugin_Repositories/62.0.2498.1440@62.0.2498.1440" timestamp="1599661975979" />
+    <state x="484" y="347" width="807" height="642" key="#Menus_and_Toolbars" timestamp="1599813407702">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="484" y="347" width="807" height="642" key="#Menus_and_Toolbars/62.0.2498.1440@62.0.2498.1440" timestamp="1599813407702" />
+    <state x="707" y="370" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1599812506781">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="707" y="370" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1599812506781" />
     <state x="624" y="201" width="915" height="663" key="#xdebugger.evaluate" timestamp="1599726338099">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
@@ -319,22 +298,22 @@
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state width="837" height="464" key="DebuggerActiveHint/62.0.2498.1440@62.0.2498.1440" timestamp="1599744883868" />
-    <state width="711" height="244" key="GridCell.Tab.0.bottom" timestamp="1599761686445">
+    <state width="609" height="370" key="GridCell.Tab.0.bottom" timestamp="1599818306924">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="711" height="244" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1599761686445" />
-    <state width="711" height="244" key="GridCell.Tab.0.center" timestamp="1599761686445">
+    <state width="609" height="370" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1599818306924" />
+    <state width="609" height="370" key="GridCell.Tab.0.center" timestamp="1599818306924">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="711" height="244" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1599761686445" />
-    <state width="711" height="244" key="GridCell.Tab.0.left" timestamp="1599761686445">
+    <state width="609" height="370" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1599818306924" />
+    <state width="609" height="370" key="GridCell.Tab.0.left" timestamp="1599818306923">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="711" height="244" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1599761686445" />
-    <state width="711" height="244" key="GridCell.Tab.0.right" timestamp="1599761686445">
+    <state width="609" height="370" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1599818306923" />
+    <state width="609" height="370" key="GridCell.Tab.0.right" timestamp="1599818306924">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="711" height="244" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1599761686445" />
+    <state width="609" height="370" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1599818306924" />
     <state width="798" height="322" key="GridCell.Tab.1.bottom" timestamp="1599761686440">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
@@ -407,14 +386,18 @@
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="1049" y="417" key="RiderGenerateDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1599760458774" />
-    <state x="290" y="149" width="1586" height="963" key="SettingsEditor" timestamp="1599811241616">
+    <state x="290" y="149" width="1586" height="963" key="SettingsEditor" timestamp="1599812429609">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state x="290" y="149" width="1586" height="963" key="SettingsEditor/62.0.2498.1440@62.0.2498.1440" timestamp="1599811241616" />
+    <state x="290" y="149" width="1586" height="963" key="SettingsEditor/62.0.2498.1440@62.0.2498.1440" timestamp="1599812429609" />
     <state width="983" height="678" key="XDebugger.FullValuePopup" timestamp="1599509740840">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state width="983" height="678" key="XDebugger.FullValuePopup/62.0.2498.1440@62.0.2498.1440" timestamp="1599509740840" />
+    <state x="768" y="608" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog" timestamp="1599813406707">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="768" y="608" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1599813406707" />
     <state x="679" y="431" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1599546312767">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>

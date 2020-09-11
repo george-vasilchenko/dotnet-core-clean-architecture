@@ -20,11 +20,8 @@ namespace NutritionManager.Application.Nutrients.Handlers
             {
                 throw new ArgumentNullException(nameof(command));
             }
-
-            var nutrient = await this.repository.GetOneByKeyAsync(command.Id);
-            nutrient.MarkDeleted();
-
-            await this.repository.SaveOneAsync(nutrient);
+            
+            await this.repository.RemoveOneByKeyAsync(command.Id);
         }
     }
 }

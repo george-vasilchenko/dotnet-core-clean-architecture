@@ -8,21 +8,15 @@ namespace NutritionManager.Application.Nutrients
         {
         }
 
-        public string Title { get; private set; } = string.Empty;
-
-        public bool IsDeleted { get; private set; }
-
-        public Guid Id { get; private set; }
-
-        public void MarkDeleted()
+        private Nutrient(Guid nutrientId, string title)
         {
-            if (this.IsDeleted)
-            {
-                throw new InvalidOperationException("Nutrient is already deleted");
-            }
-
-            this.IsDeleted = true;
+            this.NutrientId = nutrientId;
+            this.Title = title;
         }
+
+        public string Title { get; } = string.Empty;
+
+        public Guid NutrientId { get;  }
 
         public static Nutrient Create(string title)
         {
@@ -31,11 +25,7 @@ namespace NutritionManager.Application.Nutrients
                 throw new ArgumentException($"'{nameof(title)}' cannot be null or whitespace", nameof(title));
             }
 
-            return new Nutrient
-            {
-                Title = title,
-                Id = Guid.NewGuid()
-            };
+            return new Nutrient(Guid.NewGuid(), title);
         }
     }
 }

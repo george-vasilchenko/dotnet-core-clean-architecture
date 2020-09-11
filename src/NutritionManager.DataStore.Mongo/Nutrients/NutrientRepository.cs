@@ -54,7 +54,7 @@ namespace NutritionManager.DataStore.Mongo.Nutrients
 
             await this.nutrients.InsertOneAsync(model);
 
-            return entity.Id;
+            return entity.NutrientId;
         }
 
         public async Task RemoveOneByKeyAsync(Guid key)
@@ -87,16 +87,16 @@ namespace NutritionManager.DataStore.Mongo.Nutrients
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                config.CreateMap<Nutrient, NutrientModel>()
-                    .ForMember(
-                        dest => dest.NutrientId,
-                        opt => opt
-                            .MapFrom(src => src.Id.ToString()));
-                config.CreateMap<NutrientModel, Nutrient>()
-                    .ForMember(
-                        dest => dest.Id,
-                        opt => opt
-                            .MapFrom(src => Guid.Parse(src.NutrientId)));
+                config.CreateMap<Nutrient, NutrientModel>();
+                    // .ForMember(
+                    //     dest => dest.NutrientId,
+                    //     opt => opt
+                    //         .MapFrom(src => src.NutrientId.ToString()));
+                config.CreateMap<NutrientModel, Nutrient>();
+                    // .ForMember(
+                    //     dest => dest.NutrientId,
+                    //     opt => opt
+                    //         .MapFrom(src => Guid.Parse(src.NutrientId)));
             });
 
             return new Mapper(mappingConfig);

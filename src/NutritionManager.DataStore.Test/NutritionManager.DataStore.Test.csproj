@@ -17,6 +17,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\NutritionManager.DataStore.InMemory\NutritionManager.DataStore.InMemory.csproj" />
+      <ProjectReference Include="..\NutritionManager.DataStore.Mongo\NutritionManager.DataStore.Mongo.csproj" />
     </ItemGroup>
 
 </Project>

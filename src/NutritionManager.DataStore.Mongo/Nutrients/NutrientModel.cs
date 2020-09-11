@@ -8,7 +8,5 @@ namespace NutritionManager.DataStore.Mongo.Nutrients
         [BsonElement] public string NutrientId { get; set; }  = string.Empty;
 
         [BsonElement] public string Title { get; set; } = string.Empty;
-
-        [BsonElement] public bool IsDeleted { get; set; }
     }
 }

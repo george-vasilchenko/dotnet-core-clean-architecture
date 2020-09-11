@@ -28,19 +28,13 @@ namespace NutritionManager.Application.Test.Nutrients
         {
             // Arrange
             var nutrientId = new Fixture().Create<Guid>();
-            var fakeNutrient = CreteFakeNutrient();
             var command = new DeleteNutrientById(nutrientId);
-
-            A.CallTo(() => this.repository.GetOneByKeyAsync(nutrientId))
-                .Returns(fakeNutrient);
 
             // Act
             await this.sut.HandleCommandAsync(command);
 
             // Assert
-            A.CallTo(() => this.repository.GetOneByKeyAsync(nutrientId))
-                .MustHaveHappenedOnceExactly();
-            A.CallTo(() => this.repository.SaveOneAsync(fakeNutrient))
+            A.CallTo(() => this.repository.RemoveOneByKeyAsync(nutrientId))
                 .MustHaveHappenedOnceExactly();
         }
 
