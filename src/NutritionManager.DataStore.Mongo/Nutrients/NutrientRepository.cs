@@ -65,8 +65,8 @@ namespace NutritionManager.DataStore.Mongo.Nutrients
         public async Task SaveOneAsync(Nutrient entity)
         {
             var model = await this.ConvertToModelAsync(entity);
-            await this.nutrients.UpdateOneAsync(n => n.NutrientId.Equals(model.NutrientId),
-                new ObjectUpdateDefinition<NutrientModel>(model));
+            await this.nutrients
+                .ReplaceOneAsync(m => m.NutrientId.Equals(entity.NutrientId.ToString()), model);
         }
 
         public async Task<IEnumerable<Nutrient>> FindAsync(Expression<Func<Nutrient, bool>> filter)
@@ -88,17 +88,7 @@ namespace NutritionManager.DataStore.Mongo.Nutrients
             var mappingConfig = new MapperConfiguration(config =>
             {
                 config.CreateMap<Nutrient, NutrientModel>();
-
-                // .ForMember(
-                //     dest => dest.NutrientId,
-                //     opt => opt
-                //         .MapFrom(src => src.NutrientId.ToString()));
                 config.CreateMap<NutrientModel, Nutrient>();
-
-                // .ForMember(
-                //     dest => dest.NutrientId,
-                //     opt => opt
-                //         .MapFrom(src => Guid.Parse(src.NutrientId)));
             });
 
             return new Mapper(mappingConfig);

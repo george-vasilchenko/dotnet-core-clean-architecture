@@ -45,10 +45,10 @@ namespace NutritionManager.Application.Test.Nutrients
         public void HandleCommandAsync_WithNullCommand_Throws()
         {
             // Arrange
-            const CreateNutrient? command = default;
+            const CreateNutrient command = default;
 
             // Act
-            Func<Task> run = async () => await this.sut.HandleCommandAsync(command);
+            Func<Task> run = async () => await this.sut.HandleCommandAsync(command!);
 
             // Assert
             run.Should().ThrowExactly<ArgumentNullException>()

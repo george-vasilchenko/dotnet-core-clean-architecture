@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.Crosscutti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.DataStore.Test", "NutritionManager.DataStore.Test\NutritionManager.DataStore.Test.csproj", "{A3F84EF9-E0DA-4D90-AF3E-4DDBEC94A2C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9.Misc", "9.Misc", "{03834A38-E318-46F9-9F6A-972E097DC1E1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.DataStore.Mongo", "NutritionManager.DataStore.Mongo\NutritionManager.DataStore.Mongo.csproj", "{70A3330B-7520-4C55-A865-03CED932DDC1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.DataStore.Common", "NutritionManager.DataStore.Common\NutritionManager.DataStore.Common.csproj", "{D1236DD0-CD18-44BE-8305-7B1BE730D3EF}"
@@ -32,6 +30,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Clients", "0.Clients", "{0EDAE977-39D1-4BEB-B892-49614F722C48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.Web.Wasm", "NutritionManager.Web.Wasm\NutritionManager.Web.Wasm.csproj", "{8748B050-2A6B-40EE-8FB1-DEA384D842E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A9FB48D3-6AA6-4C68-AF4A-8D4A3B72477C}"
+ProjectSection(SolutionItems) = preProject
+	scripts\debug-edge.bat = scripts\debug-edge.bat
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionManager.Web.Models", "NutritionManager.Web.Models\NutritionManager.Web.Models.csproj", "{E440B3B6-A451-42BD-9383-C1273B901331}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +80,10 @@ Global
 		{8748B050-2A6B-40EE-8FB1-DEA384D842E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8748B050-2A6B-40EE-8FB1-DEA384D842E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8748B050-2A6B-40EE-8FB1-DEA384D842E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E440B3B6-A451-42BD-9383-C1273B901331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E440B3B6-A451-42BD-9383-C1273B901331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E440B3B6-A451-42BD-9383-C1273B901331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E440B3B6-A451-42BD-9383-C1273B901331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +98,7 @@ Global
 		{70A3330B-7520-4C55-A865-03CED932DDC1} = {02C49C06-7DAA-452B-8C3E-2FEE04B2538A}
 		{D1236DD0-CD18-44BE-8305-7B1BE730D3EF} = {02C49C06-7DAA-452B-8C3E-2FEE04B2538A}
 		{8748B050-2A6B-40EE-8FB1-DEA384D842E1} = {0EDAE977-39D1-4BEB-B892-49614F722C48}
+		{E440B3B6-A451-42BD-9383-C1273B901331} = {91C009C6-AE21-4770-954E-79981F10B4B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {257D4ECB-1AF0-4FB7-9006-424A859EEEFA}

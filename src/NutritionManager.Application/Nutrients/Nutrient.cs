@@ -14,7 +14,7 @@ namespace NutritionManager.Application.Nutrients
             this.Title = title;
         }
 
-        public string Title { get; } = string.Empty;
+        public string Title { get; private set; } = string.Empty;
 
         public Guid NutrientId { get; }
 
@@ -26,6 +26,16 @@ namespace NutritionManager.Application.Nutrients
             }
 
             return new Nutrient(Guid.NewGuid(), title);
+        }
+
+        public void ChangeTitle(string newTitle)
+        {
+            if (string.IsNullOrWhiteSpace(newTitle))
+            {
+                throw new ArgumentException("Value cannot be null or whitespace.", nameof(newTitle));
+            }
+
+            this.Title = newTitle;
         }
     }
 }

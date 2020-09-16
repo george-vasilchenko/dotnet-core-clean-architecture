@@ -11,5 +11,10 @@
       <ProjectReference Include="..\NutritionManager.Crosscutting\NutritionManager.Crosscutting.csproj" />
       <ProjectReference Include="..\NutritionManager.DataStore.InMemory\NutritionManager.DataStore.InMemory.csproj" />
       <ProjectReference Include="..\NutritionManager.DataStore.Mongo\NutritionManager.DataStore.Mongo.csproj" />
+      <ProjectReference Include="..\NutritionManager.Web.Models\NutritionManager.Web.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
     </ItemGroup>
 </Project>

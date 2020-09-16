@@ -1,39 +1,59 @@
 ﻿@page "/nutrient"
 <h1>Nutrient</h1>
 
-<div class="table-responsive table-hover">
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-        </tr>
-        </thead>
-        <tbody>
-        @if (NutrientsList?.Items == null)
-        {
-            <em>Loading...</em>
-        }
-        else
-        {
-            var i = 1;
+<Row >
+    <Column ColumnSize="ColumnSize.Is6">
+        <Table Hoverable="true" Narrow="true">
+            <TableHeader>
+                <TableRow>
+                    <TableHeaderCell>#</TableHeaderCell>
+                    <TableHeaderCell>Title</TableHeaderCell>
+                    <TableHeaderCell>Actions</TableHeaderCell>
+                </TableRow>
+            </TableHeader>
+            <TableBody>
+                @if (model?.Items == null)
+                {
+                    <em>Loading...</em>
+                }
+                else
+                {
+                    var array = model.Items.ToArray();
+        
+                    for (var i = 0; i < array.Length; i++)
+                    {
+                        var current = array[i];
+                        var index = (i + 1).ToString();
+        
+                        <TableRow>
+                            <TableRowHeader>@index</TableRowHeader>
+                            <TableRowCell 
+                                class="clickable"
+                                @onclick=@(e => OpenNutrientById(current.NutrientId))>@current.Title
+                            </TableRowCell>
+                            <TableRowCell>
+                                <Button Color="Color.Danger"
+                                        Size="ButtonSize.Small"
+                                        Clicked="@(async () => await DeleteNutrientAsync(current.NutrientId))">
+                                    <Icon Class="icon-small" Name="IconName.Delete"/>
+                                </Button>
+                            </TableRowCell>
+                        </TableRow>
+                    }
+                }
+            </TableBody>
+        </Table>
+    </Column>
+</Row>
+<Row >
+    <Column ColumnSize="ColumnSize.Is6">
+        <NewNutrient OnFinishedEditing="@(async _ => await RefreshAsync())"></NewNutrient>
+    </Column>
+</Row>
 
-            @foreach (var nutrient in NutrientsList.Items)
-            {
-                <tr @onclick=@(e => OpenNutrientById(nutrient.NutrientId)) 
-                    class="clickable-row">
-                    <th scope="row">@i.ToString()</th>
-                    <td>@nutrient.Title</td>
-                </tr>
 
-                i++;
-            }
-        }
-        </tbody>
-    </table>
-</div>
 <style>
-    .clickable-row
+    .clickable
     {
         cursor: pointer;
     }

@@ -20,7 +20,6 @@
       <e p="2.Application" t="Include" />
       <e p="3.Infrastructure" t="Include" />
       <e p="4.Shared" t="Include" />
-      <e p="9.Misc" t="Include" />
       <e p="NutritionManager.Application" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Common" t="Include">
@@ -35,12 +34,14 @@
           <e p="Commands" t="Include">
             <e p="CreateNutrient.cs" t="Include" />
             <e p="DeleteNutrientById.cs" t="Include" />
+            <e p="UpdateNutrientTitle.cs" t="Include" />
           </e>
           <e p="Handlers" t="Include">
             <e p="CreateNutrientHandler.cs" t="Include" />
             <e p="DeleteNutrientByIdHandler.cs" t="Include" />
             <e p="GetNutrientDetailsHandler.cs" t="Include" />
             <e p="ListNutrientsHandler.cs" t="Include" />
+            <e p="UpdateNutrientTitleHandler.cs" t="Include" />
           </e>
           <e p="Nutrient.cs" t="Include" />
           <e p="Queries" t="Include">
@@ -67,6 +68,7 @@
           <e p="GetNutrientDetailsHandlerTest.cs" t="Include" />
           <e p="ListNutrientsHandlerTest.cs" t="Include" />
           <e p="NutrientTest.cs" t="Include" />
+          <e p="UpdateNutrientTitleHandlerTest.cs" t="Include" />
         </e>
         <e p="NutritionManager.Application.Test.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -160,9 +162,10 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Nutrients" t="Include">
-          <e p="NutrientController.cs" t="Include" />
+          <e p="NutrientCommandController.cs" t="Include" />
           <e p="NutrientDetailsViewModel.cs" t="Include" />
           <e p="NutrientListItemViewModel.cs" t="Include" />
+          <e p="NutrientQueryController.cs" t="Include" />
           <e p="NutrientsListViewModel.cs" t="Include" />
         </e>
         <e p="NutritionManager.Web.Api.csproj" t="IncludeRecursive" />
@@ -179,16 +182,37 @@
         </e>
         <e p="Startup.cs" t="Include" />
       </e>
+      <e p="NutritionManager.Web.Models" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Nutrients" t="Include">
+          <e p="CreateNutrientModel.cs" t="Include" />
+          <e p="DeleteNutrientModel.cs" t="Include" />
+          <e p="UpdateNutrientModel.cs" t="Include" />
+        </e>
+        <e p="NutritionManager.Web.Models.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="NutritionManager.Web.Models.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="NutritionManager.Web.Wasm" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Home" t="Include">
+          <e p="Index.razor" t="Include" />
+        </e>
         <e p="Nutrient" t="Include">
           <e p="Models" t="Include">
             <e p="NutrientModel.cs" t="Include" />
             <e p="NutrientModelsList.cs" t="Include" />
           </e>
           <e p="Pages" t="Include">
+            <e p="NewNutrient.razor" t="Include" />
+            <e p="NewNutrient.razor.cs" t="Include" />
             <e p="NutrientDetails.razor" t="Include" />
             <e p="NutrientDetails.razor.cs" t="Include" />
             <e p="NutrientIndex.razor" t="Include" />
@@ -206,11 +230,6 @@
             </e>
           </e>
         </e>
-        <e p="Pages" t="Include">
-          <e p="Counter.razor" t="Include" />
-          <e p="FetchData.razor" t="Include" />
-          <e p="Index.razor" t="Include" />
-        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -227,10 +246,6 @@
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="app.css" t="Include" />
-            <e p="bootstrap" t="Include">
-              <e p="bootstrap.min.css" t="Include" />
-              <e p="bootstrap.min.css.map" t="Include" />
-            </e>
             <e p="open-iconic" t="Include">
               <e p="font" t="Include">
                 <e p="css" t="Include">
@@ -251,12 +266,12 @@
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="sample-data" t="Include">
-            <e p="weather.json" t="Include" />
-          </e>
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="scripts" t="Include">
+        <e p="debug-edge.bat" t="Include" />
+      </e>
     </e>
   </component>
 </project>

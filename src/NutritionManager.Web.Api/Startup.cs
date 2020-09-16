@@ -25,7 +25,7 @@ namespace NutritionManager.Web.Api
         {
             RegisterApplicationServices(services);
             services.AddCors(ConfigureCorsPolicy());
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -34,7 +34,7 @@ namespace NutritionManager.Web.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseCors("Default");
             app.UseHttpsRedirection();
             app.UseRouting();
@@ -59,9 +59,12 @@ namespace NutritionManager.Web.Api
         {
             // Nutrients
             services.AddScoped<CreateNutrientHandler>();
-            services.AddScoped<ListNutrientsHandler>();
             services.AddScoped<DeleteNutrientByIdHandler>();
+            services.AddScoped<UpdateNutrientTitleHandler>();
+            
+            services.AddScoped<ListNutrientsHandler>();
             services.AddScoped<GetNutrientDetailsHandler>();
+            
             services.AddSingleton<IRepository<Nutrient, Guid>, NutrientRepository>();
         }
     }

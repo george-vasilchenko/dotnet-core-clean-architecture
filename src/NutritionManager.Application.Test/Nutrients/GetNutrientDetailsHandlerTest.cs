@@ -48,10 +48,10 @@ namespace NutritionManager.Application.Test.Nutrients
         public void HandleQueryAsync_WithNullQuery_Throws()
         {
             // Arrange
-            GetNutrientDetails? query = null;
+            GetNutrientDetails query = default!;
 
             // Act
-            Func<Task> run = () => this.sut.HandleQueryAsync(query);
+            Func<Task> run = () => this.sut.HandleQueryAsync(query!);
 
             // Assert
             run.Should().ThrowExactly<ArgumentNullException>()
