@@ -1,23 +1,29 @@
 ﻿@page "/nutrient/{NutrientId}"
 
-<h3>Nutrient</h3>
+<Heading Size="HeadingSize.Is3"><h3>Nutrients</h3></Heading>
 
 @if (model != null)
 {
-<Validation Validator="@ValidateTitle">
-    <Field Horizontal="true">
-        <FieldLabel ColumnSize="ColumnSize.Is1">Title</FieldLabel>
-        <FieldBody ColumnSize="ColumnSize.Is4">
-            <TextEdit ColumnSize="ColumnSize.Is4" @bind-Text="@model.Title">
-                <Feedback>
-                    <ValidationError>Nutrient title should not be empty</ValidationError>
-                    <ValidationError>Nutrient title length should not exceed 32 cahracters</ValidationError>
-                </Feedback>
-            </TextEdit>
-        </FieldBody>
-    </Field>
-    <Button ColumnSize="ColumnSize.Is1"
+    
+<Row >
+    <Column ColumnSize="ColumnSize.Is6.OnDesktop.Is12.OnMobile">
+        <Validation Validator="@ValidationService.ValidateTitle">
+            <Field Horizontal="true">
+                <FieldLabel ColumnSize="ColumnSize.Is2">Title</FieldLabel>
+                <FieldBody ColumnSize="ColumnSize.Is8">
+                    <TextEdit @bind-Text="@model.Title">
+                        <Feedback>
+                            <ValidationError>Nutrient title should not be empty</ValidationError>
+                            <ValidationError>Nutrient title length should not exceed 32 cahracters</ValidationError>
+                        </Feedback>
+                    </TextEdit>
+                </FieldBody>
+            </Field>
+            <Button ColumnSize="ColumnSize.Is2"
+                    Disabled="IsSaveButtonDisabled()"
                     Color="Color.Primary" 
                     Clicked="@(async () => await UpdateNutrientAsync())">Save</Button>
-</Validation>
+        </Validation>
+    </Column>
+</Row>
 }

@@ -12,6 +12,9 @@ namespace NutritionManager.Web.Wasm.Nutrient.Pages
         private NutrientModel model;
 
         [Inject]
+        private NutrientValidationService ValidationService { get; set; }
+        
+        [Inject]
         private NutrientService Service { get; set; }
 
         [Parameter]
@@ -27,20 +30,15 @@ namespace NutritionManager.Web.Wasm.Nutrient.Pages
             this.model = await this.Service.GetNutrientAsync(Guid.Parse(this.NutrientId));
         }
 
-        private void ValidateTitle(ValidatorEventArgs eventArgs)
-        {
-            var value = eventArgs.Value?.ToString();
-
-            if (value == null || value.Length <= 0 || value.Length > 32)
-            {
-                eventArgs.Status = ValidationStatus.Error;
-            }
-        }
-
         private async Task UpdateNutrientAsync()
         {
             await this.Service.UpdateNutrientAsync(this.model);
             await this.RefreshAsync();
+        }
+        
+        private bool IsSaveButtonDisabled()
+        {
+            return this.model.Title == null || this.model.Title.Length <= 0;
         }
     }
 }

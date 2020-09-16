@@ -220,6 +220,7 @@
           </e>
           <e p="Services" t="Include">
             <e p="NutrientService.cs" t="Include" />
+            <e p="NutrientValidationService.cs" t="Include" />
           </e>
         </e>
         <e p="NutritionManager.Web.Wasm.csproj" t="IncludeRecursive" />

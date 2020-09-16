@@ -2,7 +2,7 @@
 <h1>Nutrient</h1>
 
 <Row >
-    <Column ColumnSize="ColumnSize.Is6">
+    <Column ColumnSize="ColumnSize.IsFull">
         <Table Hoverable="true" Narrow="true">
             <TableHeader>
                 <TableRow>
@@ -46,7 +46,7 @@
     </Column>
 </Row>
 <Row >
-    <Column ColumnSize="ColumnSize.Is6">
+    <Column ColumnSize="ColumnSize.Is6.OnDesktop.Is12.OnMobile">
         <NewNutrient OnFinishedEditing="@(async _ => await RefreshAsync())"></NewNutrient>
     </Column>
 </Row>

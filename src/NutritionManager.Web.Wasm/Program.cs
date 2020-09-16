@@ -39,6 +39,7 @@ namespace NutritionManager.Web.Wasm
         {
             builder.Services.AddScoped(sp => ConfigureHttpClient(builder));
             builder.Services.AddScoped<NutrientService>();
+            builder.Services.AddScoped<NutrientValidationService>();
         }
 
         private static HttpClient ConfigureHttpClient(WebAssemblyHostBuilder builder)

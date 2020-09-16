@@ -34,47 +34,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="249c985c-6556-4cbe-868c-b2a4f313419d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/UpdateNutrientTitleHandlerTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Commands/UpdateNutrientTitle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/UpdateNutrientTitleHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Api/Nutrients/NutrientCommandController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Models/Nutrients/CreateNutrientModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Models/Nutrients/DeleteNutrientModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Models/Nutrients/UpdateNutrientModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Models/NutritionManager.Web.Models.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/debug-edge.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Services/NutrientValidationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NutritionManager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/CreateNutrientHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/CreateNutrientHandlerTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/GetNutrientDetailsHandlerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/GetNutrientDetailsHandlerTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/NutrientTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Nutrient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Api/Nutrients/NutrientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Api/Nutrients/NutrientQueryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Api/NutritionManager.Web.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Api/NutritionManager.Web.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Models/NutrientModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Models/NutrientModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Services/NutrientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Services/NutrientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/NutritionManager.Web.Wasm.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/NutritionManager.Web.Wasm.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Pages/Counter.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Pages/FetchData.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Home/Index.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Static/UrisProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/Static/UrisProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/_Imports.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/css/bootstrap/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/css/bootstrap/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/sample-data/weather.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NutritionManager.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NutritionManager.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +80,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/Nutrient.razor" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.css" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Queries/GetNutrientDetails.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/GetNutrientDetailsHandler.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Api/Nutrients/NutrientDetailsViewModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Static/Routes.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Program.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Models/NutrientModel.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/_Imports.razor" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/wwwroot/css/app.css" />
@@ -146,7 +112,6 @@
         <option value="$PROJECT_DIR$/NutritionManager.Application/Nutrients/Handlers/UpdateNutrientTitleHandler.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Application.Test/Nutrients/UpdateNutrientTitleHandlerTest.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Api/Nutrients/NutrientCommandController.cs" />
-        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Api/Startup.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.DataStore.Mongo/Nutrients/NutrientRepository.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/AddNutrient.razor" />
@@ -156,13 +121,16 @@
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrientComponent.razor.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndexComponent.razor.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndexComponent.razor" />
-        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor.css" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor.css.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Program.cs" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor" />
-        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor" />
         <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NewNutrient.razor.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Services/NutrientValidationService.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor.cs" />
+        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientIndex.razor" />
+        <option value="$PROJECT_DIR$/NutritionManager.Web.Wasm/Nutrient/Pages/NutrientDetails.razor" />
       </list>
     </option>
   </component>
@@ -281,7 +249,7 @@
       <workItem from="1599899103810" duration="2184000" />
       <workItem from="1599931283721" duration="3793000" />
       <workItem from="1600069408477" duration="4494000" />
-      <workItem from="1600094895474" duration="13181000" />
+      <workItem from="1600094895474" duration="14361000" />
     </task>
     <servers />
   </component>
@@ -355,22 +323,22 @@
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state width="837" height="464" key="DebuggerActiveHint/62.0.2498.1440@62.0.2498.1440" timestamp="1600199677644" />
-    <state width="2169" height="258" key="GridCell.Tab.0.bottom" timestamp="1600239617787">
+    <state width="2169" height="258" key="GridCell.Tab.0.bottom" timestamp="1600268226986">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="2169" height="258" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600239617787" />
-    <state width="2169" height="258" key="GridCell.Tab.0.center" timestamp="1600239617787">
+    <state width="2169" height="258" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600268226986" />
+    <state width="2169" height="258" key="GridCell.Tab.0.center" timestamp="1600268226985">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="2169" height="258" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600239617787" />
-    <state width="2169" height="258" key="GridCell.Tab.0.left" timestamp="1600239617786">
+    <state width="2169" height="258" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600268226985" />
+    <state width="2169" height="258" key="GridCell.Tab.0.left" timestamp="1600268226985">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="2169" height="258" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600239617786" />
-    <state width="2169" height="258" key="GridCell.Tab.0.right" timestamp="1600239617787">
+    <state width="2169" height="258" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600268226985" />
+    <state width="2169" height="258" key="GridCell.Tab.0.right" timestamp="1600268226986">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="2169" height="258" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600239617787" />
+    <state width="2169" height="258" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600268226986" />
     <state width="2169" height="214" key="GridCell.Tab.1.bottom" timestamp="1600236447869">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
